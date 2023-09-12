@@ -1,0 +1,46 @@
+.homeInner{
+    position: relative;
+    width: 320px;
+    margin: auto;
+}   
+.homeInner i{
+    color: #2c3e50;
+}
+
+.homeInnerI::after{
+    content: "";
+    position: absolute;
+    background-color: #2c3e50;
+    height: 4px;
+    width: 80px;
+    right: 60px;
+    bottom: 10px;
+}
+.homeInnerI::before{
+    content: "";
+    position: absolute;
+    background-color: #2c3e50;
+    height: 4px;
+    width: 80px;
+    left: 60px;
+    bottom: 10px;
+}
+
+.portfolioImgDiv{
+    position: relative;
+}
+
+.layer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    transition: all .5s;
+    opacity: 0;
+}
+.layer:hover{
+    opacity: 1;
+    background-color: #1abc9ce6;
+    cursor: pointer;
+}

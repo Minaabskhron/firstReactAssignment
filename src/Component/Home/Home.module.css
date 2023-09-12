@@ -1,0 +1,30 @@
+.main{
+    background-color: #1ABC9C;
+}
+.homeInner{
+    position: relative;
+    width: 320px;
+    margin: auto;
+}   
+.homeInner i{
+    color: white;
+}
+
+.homeInnerI::after{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 4px;
+    width: 80px;
+    right: 60px;
+    bottom: 10px;
+}
+.homeInnerI::before{
+    content: "";
+    position: absolute;
+    background-color: white;
+    height: 4px;
+    width: 80px;
+    left: 60px;
+    bottom: 10px;
+}
