@@ -6,6 +6,9 @@
 .homeInner i{
     color: #2c3e50;
 }
+.h1Color{
+    color: #2c3e50;
+}
 
 .homeInnerI::after{
     content: "";
@@ -43,4 +46,13 @@
     opacity: 1;
     background-color: #1abc9ce6;
     cursor: pointer;
+}
+.mainLayer{
+    background-color: rgba(0, 0, 0,0.6);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -470px;
+    z-index: 999;
 }
