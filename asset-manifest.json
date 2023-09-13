@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/firstReactAssignment/static/css/main.c73fcf87.css",
-    "main.js": "/firstReactAssignment/static/js/main.ef9811ff.js",
+    "main.js": "/firstReactAssignment/static/js/main.2b0a9887.js",
     "static/js/787.ef704b77.chunk.js": "/firstReactAssignment/static/js/787.ef704b77.chunk.js",
     "static/media/fa-solid-900.ttf": "/firstReactAssignment/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
     "static/media/fa-brands-400.ttf": "/firstReactAssignment/static/media/fa-brands-400.016b4a6cdced82ab3aa1.ttf",
@@ -17,11 +17,11 @@
     "static/media/fa-v4compatibility.woff2": "/firstReactAssignment/static/media/fa-v4compatibility.1bac2991f3dbfa237aec.woff2",
     "index.html": "/firstReactAssignment/index.html",
     "main.c73fcf87.css.map": "/firstReactAssignment/static/css/main.c73fcf87.css.map",
-    "main.ef9811ff.js.map": "/firstReactAssignment/static/js/main.ef9811ff.js.map",
+    "main.2b0a9887.js.map": "/firstReactAssignment/static/js/main.2b0a9887.js.map",
     "787.ef704b77.chunk.js.map": "/firstReactAssignment/static/js/787.ef704b77.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c73fcf87.css",
-    "static/js/main.ef9811ff.js"
+    "static/js/main.2b0a9887.js"
   ]
 }
