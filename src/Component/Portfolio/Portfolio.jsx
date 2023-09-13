@@ -4,8 +4,18 @@ import img1 from "../../assets/Images/poert1.png";
 import img2 from "../../assets/Images/port2.png";
 import img3 from "../../assets/Images/port3.png";
 
+import $ from "jquery"
 
 export default class Portfolio extends Component {
+
+  appearImgs(){
+    const myImage = $(".myImage")
+    const myLayer = $(".mainLayerClass");
+    const myImageSrc = myImage.prev().attr("src");
+    myLayer.removeClass("d-none");
+    myLayer.addClass("d-flex");
+    myLayer.children(0).attr("src",myImageSrc);
+  }
 
   render() {
     return (
@@ -144,46 +154,28 @@ export default class Portfolio extends Component {
 
   componentDidMount() {
     
-    const myImage = document.querySelectorAll(".myImage");
-    const myLayer = document.querySelector(".mainLayerClass");
-    
-    
-    myImage.forEach((image) => {
-      image.addEventListener("click", () => {
-        const myImageSrc = image.previousSibling.getAttribute("src");
-        myLayer.classList.remove("d-none");
-        myLayer.classList.add("d-flex");
-        myLayer.firstChild.setAttribute("src",myImageSrc);
-      });
-    });
+    const myImage = $(".myImage");
+    const myLayer = $(".mainLayerClass");
 
-    myLayer.addEventListener("click", function(e){
-      if(this==e.target)
+    // myLayer.css("bottom",-window.screen.availHeight)
+
+    // console.log(window.screen.availHeight);
+    myImage.click(this.appearImgs);
+    
+    myLayer.click(function(e) {
+      if(this == e.target)
       {
-        this.classList.add("d-none");
+        $(this).addClass("d-none");
       }
     })
+
+  
   }
 
   componentWillUnmount(){
-    const myImage = document.querySelectorAll(".myImage");
-    const myLayer = document.querySelector(".mainLayerClass");
-    
-    
-    myImage.forEach((image) => {
-      image.removeEventListener("click", () => {
-        const myImageSrc = image.previousSibling.getAttribute("src");
-        myLayer.classList.remove("d-none");
-        myLayer.classList.add("d-flex");
-        myLayer.firstChild.setAttribute("src",myImageSrc);
-      });
-    });
-
-    myLayer.removeEventListener("click", function(e){
-      if(this==e.target)
-      {
-        this.classList.add("d-none");
-      }
-    })
+    const myImage = $(".myImage");
+    const myLayer = $(".mainLayerClass");
+    myImage.unbind();
+    myLayer.unbind();
   }
 }
