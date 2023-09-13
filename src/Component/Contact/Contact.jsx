@@ -15,11 +15,12 @@ export default class Contact extends Component {
               </div>
           </div>
         </div>
-        <div className='pt-5'>
-          <input type="text" className='form-control w-50 m-auto' placeholder='userName'  />
-          <input type="text" className='form-control w-50 m-auto mt-5' placeholder='userAge'  />
-          <input type="text" className='form-control w-50 m-auto mt-5' placeholder='userEmail'  />
-          <input type="text" className='form-control w-50 m-auto mt-5' placeholder='userPassword'  /> 
+        <div className='pt-5 w-50 m-auto'>
+          <input type="text" className='form-control ' placeholder='userName'  />
+          <input type="text" className='form-control mt-5' placeholder='userAge'  />
+          <input type="text" className='form-control mt-5' placeholder='userEmail'  />
+          <input type="text" className='form-control mt-5' placeholder='userPassword'  /> 
+          <button className='btn btn-info text-white mt-3'>send Message</button>
         </div>
         
       </section>

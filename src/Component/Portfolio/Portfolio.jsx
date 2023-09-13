@@ -6,6 +6,7 @@ import img3 from "../../assets/Images/port3.png";
 
 
 export default class Portfolio extends Component {
+
   render() {
     return (
       <>
@@ -157,6 +158,28 @@ export default class Portfolio extends Component {
     });
 
     myLayer.addEventListener("click", function(e){
+      if(this==e.target)
+      {
+        this.classList.add("d-none");
+      }
+    })
+  }
+
+  componentWillUnmount(){
+    const myImage = document.querySelectorAll(".myImage");
+    const myLayer = document.querySelector(".mainLayerClass");
+    
+    
+    myImage.forEach((image) => {
+      image.removeEventListener("click", () => {
+        const myImageSrc = image.previousSibling.getAttribute("src");
+        myLayer.classList.remove("d-none");
+        myLayer.classList.add("d-flex");
+        myLayer.firstChild.setAttribute("src",myImageSrc);
+      });
+    });
+
+    myLayer.removeEventListener("click", function(e){
       if(this==e.target)
       {
         this.classList.add("d-none");
