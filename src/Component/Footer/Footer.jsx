@@ -41,7 +41,6 @@ export default class Footer extends Component {
 
             </div>
         </footer>
-        <div className='myOffsetFooter'></div>
     </>
     );
   }

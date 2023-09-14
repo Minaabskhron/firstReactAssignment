@@ -160,11 +160,6 @@ export default class Portfolio extends Component {
       if(this==e.target) {
         this.classList.add("d-none");  }
       })
-
-    // const myOffsetPortfolio = $(".myOffsetPortfolio").offset().top;
-    // const myOffsetFooter = $(".myOffsetFooter").offset().top;
-    // myLayer.css("bottom",-(myOffsetFooter-myOffsetPortfolio));
-    // console.log(myOffsetPortfolio, myOffsetFooter);
   }
 
   componentWillUnmount(){
