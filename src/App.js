@@ -5,6 +5,7 @@ import Layout from './Component/Layout/Layout';
 import About from './Component/About/About';
 import Portfolio from './Component/Portfolio/Portfolio';
 import Contact from './Component/Contact/Contact';
+import NotFound from './Component/NotFound/NotFound';
 
 
 const routers = createHashRouter([
@@ -13,6 +14,7 @@ const routers = createHashRouter([
     {path:"about", element:<About/>},
     {path:"portfolio", element:<Portfolio/>},
     {path:"contact", element:<Contact/>},
+    {path:"*", element:<NotFound/>}
   ]}
 ])
 
