@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import $ from 'jquery'
 
 import './NavBar.css'
 import { Link } from 'react-router-dom';
@@ -18,7 +17,7 @@ export default class NavBar extends Component {
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
 
                 <li className="nav-item pe-2">
-                <Link className="nav-link myNavBarLinks" to="about">ABOUT</Link>
+                <Link className={ " nav-link myNavBarLinks"} to="about">ABOUT</Link>
                 </li>
 
 
@@ -38,14 +37,17 @@ export default class NavBar extends Component {
   }
 
   componentDidMount(){
-    const navLinks = $(".myNavBarLinks")
-    navLinks.click(
-      function(e)
-      {
-        navLinks.removeClass("navbarColor")
-        $(e.target).addClass("navbarColor").addClass("rounded-3")
-        $(".navbar-brand").removeClass("navbarColor")
-      }
-    )
+    const navLinks = document.querySelectorAll(".myNavBarLinks")
+    navLinks.forEach(navLink=>{
+      navLink.addEventListener("click",function(e){
+        for(let index=0;index<navLinks.length;index++ )
+        {
+          navLinks[index].classList.remove("navbarColor")
+        }
+        e.target.classList.add("navbarColor")
+        e.target.classList.add("rounded-3")
+        document.querySelector(".navbar-brand").classList.remove("navbarColor")
+      })
+    })
   }
 }
